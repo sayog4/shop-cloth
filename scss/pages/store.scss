@@ -1,0 +1,25 @@
+.store{
+  max-width: 90rem;
+  padding: 5rem 2rem;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1.3rem;
+  &__street{
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+    font-size: 1.4rem;
+  }
+  &__details{
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+}
+.store-item{
+  
+  background: #fff;
+  padding: 1.5rem;
+  display: grid;
+}

@@ -1,0 +1,77 @@
+.top{
+    background: #000;
+    color: $font-lighter;
+    &__list{
+        
+        
+        
+        display: flex;
+        justify-content: center;
+    }
+
+    
+    &__link:link,
+    &__link:visited{
+        
+        padding: 1rem 5rem;
+        transition: all .2s;
+    }
+    &__link:hover,
+    &__link:active{
+        background: rgba(255, 255, 255, .2);
+        color: $color-white;
+
+    }
+    
+}
+.collection{
+    &__item{
+        
+        padding:  0 2rem;
+    }
+    &__link:link,
+    &__link:visited{
+        border-bottom: 1px solid transparent;
+        padding-bottom: 1rem;
+
+        transition:  all .2s;
+        
+    }
+    &__link:hover,
+    &__link:active{
+        color: $color-blue;
+        border-bottom: 1px solid currentColor;
+    }
+}
+
+.lb-card{
+    padding: 2rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: $color-white;
+    &__box{
+        display: grid;
+    }
+    &__img{
+
+    }
+    &__text{
+        font-size: 1.2rem;
+    }
+    &__btn:link,
+    &__btn:visited{
+        font-size: 1.4rem;
+        border: 1px solid $color-black;
+        padding: 1rem 2rem;
+        justify-self: end;
+        align-self: end;
+        backface-visibility: hidden;
+
+        transition: all .2s;
+    }
+    &__btn:hover,
+    &__btn:active{
+        border: 1px solid #c471ed;
+        background: #c471ed;
+    }
+}

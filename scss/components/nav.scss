@@ -1,0 +1,134 @@
+.open .nav__list,
+.open .nav__button,
+.open .nav__search{
+    opacity: 1;
+    transform: translateX(0%);
+}
+.nav{
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    padding: 2rem 3rem;
+
+    display: flex;
+    position: relative;
+
+    
+    @media only screen and (max-width: $bp-medium) {
+        display: grid;
+    }
+
+    
+    &__hamburger{
+        display: none;
+        position: absolute;
+        top: 1.5rem;
+        right: 6rem;
+        font-size: 1.8rem;
+        cursor: pointer;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: flex;
+        }
+    }
+    &__brand:link,
+    &__brand:visited{
+        margin-right: auto;
+
+        transition: .2s;
+        color: #fff;
+        font-size: 1.8rem;
+    }
+    &__brand:hover,
+    &__brand:active{
+        color: $color-blue;
+    }
+
+    &__list{
+        display: flex;
+        transition: opacity 0s, transform .5s;
+        @media only screen and (max-width: $bp-medium) {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            opacity: 0;
+            flex-direction: column;
+            background: #fff;
+            margin-left: auto;
+            width: 50%;
+            margin-top: 1rem;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(110%);
+            z-index: 200;
+
+        }
+    }
+    &__item{
+        
+        padding: 0 2rem;
+        @media only screen and (max-width: $bp-medium) {
+            padding: 2rem;
+            width: 100%;
+        }
+    }
+    &__link:link,
+    &__link:visited{
+        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border: 2px solid transparent;
+        padding-bottom: .7rem;
+        transition:  all .2s;
+    }
+    &__link:hover,
+    &__link:active{
+        
+        border-bottom: 2px solid $color-blue;
+        color: $color-blue;
+        @media only screen and (max-width: $bp-medium) {
+            color: $color-blue;
+            background: rgba(0,0,0,.15);
+            border: 2px solid transparent;
+        }
+    }
+    &__search{
+        background: transparent;
+        border: 1px solid $color-black;
+        border-radius: 100px;
+        outline: none;
+        padding: 0 1rem;
+
+        transition: opacity 0s, transform .5s;
+
+        @media only screen and (max-width: $bp-medium) {
+            height: 3rem;
+            background: #fff;
+        }
+    }
+    &__icon{
+        font-size: 1.5rem;
+        
+    }
+    &__button{
+        background: transparent;
+        border: none;
+        outline: none;
+        position: relative;
+        top: 0;
+        right: 25px;
+        transition: opacity 0s, transform .5s;
+        @media only screen and (max-width: $bp-medium) {
+            opacity: 0;
+            right: -17%;
+            top: -38%;
+        }
+    }
+    &__search:focus{
+        border: 1px solid $color-blue;
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    }
+    &__search:focus + &__button{
+        color: $color-blue;
+    }
+}
